@@ -11,6 +11,8 @@ html, body {
 
 body {
     line-height: 1.5;
+    display: grid;
+    place-items: center;
 }
 
 button,
@@ -29,11 +31,16 @@ input {
     position: absolute;
     display: flex;
     border: 1px solid black;
+    margin: auto;
 
 }
 
 .right {
+    width: 330px;
     padding: 5px;
+}
+
+input {
 }
 
 img{
