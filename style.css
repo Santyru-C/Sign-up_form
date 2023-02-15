@@ -50,7 +50,7 @@ input{
     border-radius: 5px;
 }
 
-input:invalid:focus {
+input:invalid:not(:placeholder-shown):not(:focus) {
     border-color: crimson;
 }
 
