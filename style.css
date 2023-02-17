@@ -72,3 +72,18 @@ input {
   padding: 5px;
   height: 30px;
 }
+
+input {
+    appearance: none;
+    outline: none;
+    border-radius: 5px;
+}
+
+input:invalid:not(:focus):not(:placeholder-shown) {
+    border-color: crimson;
+}
+
+input:valid {
+    border-color: greenyellow;
+}
+
