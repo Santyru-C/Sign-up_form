@@ -113,3 +113,8 @@ button {
     font-weight: bold;
 }
 
+button:hover {
+    cursor: pointer;
+    box-shadow: inset 10px 10px 10px rgba(80, 92, 51, 0.17);
+}
+
