@@ -16,15 +16,48 @@ body {
 }
 
 .main_container{
-    display: flex;
     width: 50rem;
+    display: flex;
     padding: 0.5rem 0 0.5rem 0.5rem;
+    background-color: #f8f9fa;
     border: 1px solid rgba(0, 0, 0, 0.5);
     border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.section_left {
+    width: 55%;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
 }
 
 .section_right {
-    padding: 5px;
+    width: 45%;
+}
+
+.header_container,
+.foot_container {
+    padding: 0 0.5rem 0 0.5rem;
+}
+
+.header_container {
+    margin: 2.5rem 0 2.5rem 0;
+    text-align: center;
+}
+
+form {
+    margin-bottom: 11rem;
+    background-color: white;
+    padding: 0.5rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.main_form_block {
+    margin-bottom: 1.5rem;
 }
 
 button,
@@ -32,17 +65,9 @@ label,
 input {
   display: block;
   font-family: inherit;
-  font-size: 100%;
+  font-size: 0.8rem;
   margin: 0;
   width: 100%;
   padding: 5px;
   height: 30px;
-}
-
-.section_left {
-}
-
-img {
-    width: 30rem;
-    height: 100%;
 }
