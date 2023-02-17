@@ -61,29 +61,55 @@ form {
     margin-bottom: 1.5rem;
 }
 
+.input_container {
+    margin-bottom: 0.5rem;
+}
 button,
 label,
 input {
   display: block;
   font-family: inherit;
-  font-size: 0.8rem;
   margin: 0;
   width: 100%;
-  padding: 5px;
-  height: 30px;
+  padding: 0 0.5rem;
+}
+
+label {
+    font-size: 0.8rem;
+    padding: 0 0.25rem;
+}
+
+input,
+button {
+    height: 2rem;
 }
 
 input {
     appearance: none;
     outline: none;
+    border: 2px solid rgb(140, 140, 140);
     border-radius: 5px;
 }
 
+input:focus {
+    background-color: rgba(0, 0, 0, 0.05);
+    box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.5)    ;
+}
+
 input:invalid:not(:focus):not(:placeholder-shown) {
-    border-color: crimson;
+    border: 3px solid crimson;
 }
 
 input:valid {
-    border-color: greenyellow;
+    border: 3px solid #467302;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+button {
+    background-color: #6C8C54;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
 }
 
