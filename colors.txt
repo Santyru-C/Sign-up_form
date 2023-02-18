@@ -1,0 +1,9 @@
+990872 rosa fondo
+480252 violeta 1 body
+371366 violeta 2 container
+07F2F2 celeste
+047575 celeste 2
+1F021E violeta oscuro
+270839 violeta oscuro 1
+
+F2D1B3 amarillo base 
