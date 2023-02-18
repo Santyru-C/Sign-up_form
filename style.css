@@ -1,3 +1,9 @@
+:root {
+    --neon-pink: #F20CB5;
+    --neon-lightblue: #07F2F2;
+    --base-yellow: #F2D1B3;
+}
+
 * {
     box-sizing: border-box;
     font-family: sans-serif;
@@ -94,8 +100,9 @@ input {
     outline: none;
     color: #F2D1B3;
     background-color: #212121;
-    border: 2px solid #F20CB5;
+    border: 2px solid var(--neon-pink);
     border-radius: 5px;
+    box-shadow: inset 0px 1px 1px var(--neon-pink);
 }
 
 ::placeholder {
@@ -108,11 +115,11 @@ input:focus {
 }
 
 input:invalid:not(:focus):not(:placeholder-shown) {
-    border: 3px solid crimson;
+    border: 2px solid #FF2119;
 }
 
 input:valid {
-    border: 3px solid #467302;
+    border: 2px solid #39FF14;
     background-color: rgba(0, 0, 0, 0.05);
 }
 
