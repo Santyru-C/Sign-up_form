@@ -1,9 +1,12 @@
 :root {
+    /*Main colors*/
     --neon-pink: #F20CB5;
     --neon-lightblue: #07F2F2;
     --base-yellow: #F2D1B3;
     --neon-green: #39FF14;
+    --neon-red: #FF2119;
 
+    --input-border: 2px solid;
     --focus-shadow: inset -5px 0px 20px;
 
 }
@@ -104,7 +107,7 @@ input {
     outline: none;
     color: var(--base-yellow);
     background-color: #212121;
-    border: 2px solid var(--neon-pink);
+    border: var(--input-border) var(--neon-pink);
     border-radius: 5px;
     box-shadow: 0px 1px 5px var(--neon-pink);
 }
@@ -114,18 +117,23 @@ input {
 }
 
 input:focus {
-    background-color: rgba(0, 0, 0, 0.05);
     box-shadow: var(--focus-shadow) var(--neon-pink);
 }
 
 input:invalid:not(:focus):not(:placeholder-shown) {
-    border: 2px solid #FF2119;
+    border: var(--input-border) var(--neon-red);
+}
+
+input:invalid:focus:not(:placeholder-shown){
+    box-shadow: var(--focus-shadow) var(--neon-red);
 }
 
 input:valid {
-    border: 2px solid #39FF14;
+    border: var(--input-border) var(--neon-green);
+}
+
+input:valid:focus {
     box-shadow: var(--focus-shadow) var(--neon-green);
-    background-color: rgba(0, 0, 0, 0.05);
 }
 
 .submit_button {
