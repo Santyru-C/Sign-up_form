@@ -81,7 +81,7 @@ img {
 }
 
 form {
-    margin-bottom: 11rem;
+    margin-bottom: 0.5rem;
     background-color: var(--black);
     padding: 0.5rem;
     box-shadow: 0 4px 5px rgba(0, 0, 0, 0.5);
@@ -131,7 +131,7 @@ input {
 }
 
 input:hover {
-    box-shadow: var(--hover-shadow) var(--neon-pink);   
+    box-shadow: var(--hover-shadow) var(--neon-pink);
 }
 
 input:focus {
@@ -179,6 +179,23 @@ input:valid:focus {
     box-shadow: var(--hover-shadow) var(--base-yellow);
     transform: translateY(-0.10rem);
     transition: all 0.25s ease;
+}
+
+.foot_container {
+    margin-bottom: 10rem;
+}
+
+.foot_text {
+    color: var(--base-yellow);
+    padding-left: 0.25rem;
+}
+
+.log_in {
+    color: var(--neon-lightblue);
+}
+
+.log_in:visited {
+    color: #6B00ED;
 }
 
 /*Add password confirmation script*/
