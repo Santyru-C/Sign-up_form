@@ -2,7 +2,7 @@
     /*Main colors*/
     --neon-pink: #F20CB5;
     --neon-lightblue: #07F2F2;
-    --base-yellow: #F2D1B3;
+    --base-yellow: #FFDDBD;
     --neon-green: #39FF14;
     --neon-red: #FF2119;
 
@@ -58,14 +58,23 @@ p {
     color: var(--neon-lightblue);
 }
 
+.sign_up_text{
+    font-weight: bold;
+    color: var(--base-yellow);
+}
+
 .header_container,
 .foot_container {
     padding: 0 0.5rem 0 0.5rem;
 }
 
 .header_container {
-    margin: 2.5rem 0 2.5rem 0;
+    margin: 2rem 1rem 2rem 1rem;
+    padding: 0.5rem;
     text-align: center;
+    border: 2px solid var(--neon-lightblue);
+    background-color: #000000;
+    border-radius: 5px;
 }
 
 form {
@@ -110,7 +119,8 @@ input {
     background-color: #212121;
     border: var(--input-border) var(--neon-pink);
     border-radius: 5px;
-    box-shadow: 0px 1px 5px var(--neon-pink);
+    box-shadow: var(--unfocused-shadow) var(--neon-pink);
+    transition: all 0.25s ease
 }
 
 ::placeholder {
@@ -152,3 +162,4 @@ button:hover {
     box-shadow: inset 7px 7px 10px rgba(80, 92, 51, 0.17);
 }
 
+/*Add password confirmation script*/
