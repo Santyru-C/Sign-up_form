@@ -8,6 +8,7 @@
 
     --input-border: 2px solid;
     --focus-shadow: inset -5px 0px 20px;
+    --unfocused-shadow: 0px 1px 5px;
 
 }
 
@@ -122,6 +123,7 @@ input:focus {
 
 input:invalid:not(:focus):not(:placeholder-shown) {
     border: var(--input-border) var(--neon-red);
+    box-shadow: var(--unfocused-shadow) var(--neon-red);
 }
 
 input:invalid:focus:not(:placeholder-shown){
@@ -130,6 +132,7 @@ input:invalid:focus:not(:placeholder-shown){
 
 input:valid {
     border: var(--input-border) var(--neon-green);
+    box-shadow: var(--unfocused-shadow) var(--neon-green);
 }
 
 input:valid:focus {
