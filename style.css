@@ -8,7 +8,8 @@
 
     --input-border: 2px solid;
     --focus-shadow: inset -5px 0px 20px;
-    --unfocused-shadow: 0px 1px 5px;
+    --unfocused-shadow: 0px 1px 7px;
+    --hover-shadow: 0px 1px 15px
 
 }
 
@@ -54,12 +55,12 @@ img {
     width: 45%;
 }
 
-p {
+.header_text {
     color: var(--neon-lightblue);
 }
 
 .sign_up_text{
-    font-weight: bold;
+    font-weight: 100;
     color: var(--base-yellow);
 }
 
@@ -73,6 +74,7 @@ p {
     padding: 0.5rem;
     text-align: center;
     border: 2px solid var(--neon-lightblue);
+    box-shadow: var(--unfocused-shadow) var(--neon-lightblue);
     background-color: #000000;
     border-radius: 5px;
 }
@@ -112,6 +114,10 @@ button {
     height: 2rem;
 }
 
+::placeholder {
+    color: var(--base-yellow);
+}
+
 input {
     appearance: none;
     outline: none;
@@ -123,12 +129,13 @@ input {
     transition: all 0.25s ease
 }
 
-::placeholder {
-    color: var(--base-yellow);
+input:hover {
+    box-shadow: var(--hover-shadow) var(--neon-pink);   
 }
 
 input:focus {
     box-shadow: var(--focus-shadow) var(--neon-pink);
+    transition: all 0.25s ease
 }
 
 input:invalid:not(:focus):not(:placeholder-shown) {
@@ -143,10 +150,16 @@ input:invalid:focus:not(:placeholder-shown){
 input:valid {
     border: var(--input-border) var(--neon-green);
     box-shadow: var(--unfocused-shadow) var(--neon-green);
+    transition: all 0.25s ease
+}
+
+input:valid:hover {
+    box-shadow: var(--hover-shadow) var(--neon-green);
 }
 
 input:valid:focus {
     box-shadow: var(--focus-shadow) var(--neon-green);
+    transition: all 0.25s ease
 }
 
 .submit_button {
