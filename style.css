@@ -164,16 +164,20 @@ input:valid:focus {
 }
 
 .submit_button {
+    font-size: 0.9rem;
     background-color: var(--black);
     border: 3px solid var(--base-yellow);
     border-radius: 5px;
     color: var(--base-yellow);
-    font-weight: bold;
+    transition: all 0.25s ease;
 }
 
 .submit_button:hover {
     cursor: pointer;
-    box-shadow: inset 7px 7px 10px rgba(80, 92, 51, 0.17);
+    box-shadow: var(--hover-shadow) var(--base-yellow);
+    text-shadow: 5px 5px 15px var(--base-yellow);
+    transform: translateY(-0.10rem);
+    transition: all 0.25s ease;
 }
 
 /*Add password confirmation script*/
