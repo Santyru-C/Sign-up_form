@@ -165,6 +165,7 @@ input:valid:focus {
 
 .submit_button {
     font-size: 0.9rem;
+    font-weight: 520;
     background-color: var(--black);
     border: 3px solid var(--base-yellow);
     border-radius: 5px;
@@ -174,8 +175,8 @@ input:valid:focus {
 
 .submit_button:hover {
     cursor: pointer;
+    text-shadow: var(--base-yellow) 2px 2px 5px;
     box-shadow: var(--hover-shadow) var(--base-yellow);
-    text-shadow: 5px 5px 15px var(--base-yellow);
     transform: translateY(-0.10rem);
     transition: all 0.25s ease;
 }
