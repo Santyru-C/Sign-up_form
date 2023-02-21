@@ -41,7 +41,7 @@
                             type="email" 
                             id="email" 
                             name="email" 
-                            placeholder="email@example.com" 
+                            placeholder="Email*" 
                             required>
                     </div>
                     <div class="input_container">
@@ -76,16 +76,15 @@
     </div>
     <script>
         var pw2 = document.getElementById("password_2");
+
         function matchPassword() {
             var pw1 = document.getElementById("password_1");  
             pw2 = document.getElementById("password_2"); 
-            console.log(pw1.value)
-            console.log(pw2.value)
             if(pw1.value != pw2.value)  
             {   
-                console.log("invalido")
+                pw2.setCustomValidity("invalid_field")
             } else {
-                console.log("valido")  
+                pw2.setCustomValidity("")
             }
         }
         
