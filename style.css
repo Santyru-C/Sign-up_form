@@ -11,6 +11,9 @@
     --focus-shadow: inset -5px 0px 15px;
     --unfocused-shadow: 0px 1px 7px;
     --hover-shadow: 0px 1px 15px;
+    --div-shadow: 0 4px 5px rgba(0, 0, 0, 0.5);
+
+    --input-light-transition: all 0.25s ease;
 
 }
 
@@ -61,39 +64,44 @@ img {
     width: 45%;
 }
 
-.header_text {
-    color: var(--neon-lightblue);
+.header_container {
+    background-color: var(--black);
+    margin: 1.5rem 0;
+    padding: 1rem 0;
+    box-shadow: var(--div-shadow);
 }
 
 p {
     text-shadow: 1px 1px 7px;
 }
 
-.sign_up_text{
-    font-weight: 100;
-    color: var(--base-yellow);
-    font-weight: bold;
-}
-
-.header_container,
+.header_text,
+.sign_up_text,
 .gitHub {
     text-align: center;
     border: var(--input-border) var(--neon-lightblue);
     box-shadow: var(--unfocused-shadow) var(--neon-lightblue);
-    background-color: var(--black);
+    background-color: #212121;
     border-radius: 5px;
+    padding: 0.5rem;
+    margin: 0 1rem;
 }
 
-.header_container {
-    padding: 0.5rem;
-    margin: 2rem 1rem 2rem 1rem;
+.header_text {
+    color: var(--neon-lightblue);
+    margin-bottom: 1.5rem;
+}
+
+.sign_up_text{
+    color: var(--base-yellow);
+    font-weight: bold;
 }
 
 form {
     margin-bottom: 0.5rem;
     background-color: var(--black);
     padding: 0.5rem;
-    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: var(--div-shadow);
 }
 
 .main_form_block {
@@ -136,11 +144,12 @@ input {
     border: var(--input-border) var(--neon-pink);
     border-radius: 5px;
     box-shadow: var(--unfocused-shadow) var(--neon-pink);
-    transition: all 0.25s ease
+    transition: var(--input-light-transition)
 }
 
 /* Avoid shadow flickering if input hovered when it is focused*/
-input:hover{
+input:hover,
+input:invalid:not(:focus):hover{
     box-shadow: var(--hover-shadow) var(--neon-pink);
 }
 
@@ -169,7 +178,6 @@ input:valid:hover {
 
 input:valid:focus {
     box-shadow: var(--focus-shadow) var(--neon-green);
-    transition: all 0.25s ease
 }
 
 .submit_button {
@@ -179,7 +187,8 @@ input:valid:focus {
     border: 3px solid var(--base-yellow);
     border-radius: 5px;
     color: var(--base-yellow);
-    transition: all 0.25s ease;
+    box-shadow: var(--unfocused-shadow) var(--base-yellow);
+    transition: var(--input-light-transition);
 }
 
 .submit_button:hover {
@@ -187,7 +196,6 @@ input:valid:focus {
     text-shadow: var(--base-yellow) 2px 2px 5px;
     box-shadow: var(--hover-shadow) var(--base-yellow);
     transform: translateY(-0.10rem);
-    transition: all 0.25s ease;
 }
 
 .foot_container {
@@ -209,6 +217,7 @@ a:visited {
 
 .gitHub {
     margin: 0.5rem;
+    padding: 0.2rem;
 }
 
 .github_logo {
