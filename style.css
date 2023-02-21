@@ -8,15 +8,20 @@
     --black: #000000;
 
     --input-border: 2px solid;
-    --focus-shadow: inset -5px 0px 20px;
+    --focus-shadow: inset -5px 0px 15px;
     --unfocused-shadow: 0px 1px 7px;
     --hover-shadow: 0px 1px 15px;
 
 }
 
+@font-face {
+    font-family: SourceCode-Pro;
+    src: url(./fonts/SourceCodePro-Regular.ttf);
+}
+
 * {
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: SourceCode-Pro, sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -67,21 +72,21 @@ p {
 .sign_up_text{
     font-weight: 100;
     color: var(--base-yellow);
+    font-weight: bold;
 }
 
 .header_container,
-.foot_container {
-    padding: 0 0.5rem 0 0.5rem;
-}
-
-.header_container {
-    margin: 2rem 1rem 2rem 1rem;
-    padding: 0.5rem;
+.gitHub {
     text-align: center;
     border: var(--input-border) var(--neon-lightblue);
     box-shadow: var(--unfocused-shadow) var(--neon-lightblue);
     background-color: var(--black);
     border-radius: 5px;
+}
+
+.header_container {
+    padding: 0.5rem;
+    margin: 2rem 1rem 2rem 1rem;
 }
 
 form {
@@ -134,7 +139,8 @@ input {
     transition: all 0.25s ease
 }
 
-input:hover {
+/* Avoid shadow flickering if input hovered when it is focused*/
+input:hover{
     box-shadow: var(--hover-shadow) var(--neon-pink);
 }
 
@@ -145,6 +151,10 @@ input:focus {
 input:invalid:not(:focus):not(:placeholder-shown) {
     border: var(--input-border) var(--neon-red);
     box-shadow: var(--unfocused-shadow) var(--neon-red);
+}
+
+input:invalid:not(:placeholder-shown):hover {
+    box-shadow: var(--hover-shadow) var(--neon-red);
 }
 
 input:valid {
@@ -189,18 +199,25 @@ input:valid:focus {
     padding-left: 0.25rem;
 }
 
-.log_in {
+a {
     color: var(--neon-lightblue);
 }
 
-.log_in:visited {
+a:visited {
     color: #6B00ED;
+}
+
+.gitHub {
+    margin: 0.5rem;
+}
+
+.github_logo {
+    position: absolute;
+    background-color: white;
+    border-radius: 15px;
+    margin-left: 0.5rem;
 }
 
 /*Add password confirmation script
 -add better transition from hover to focus box shadow
--add text shadow in all p
--add a suitable font
--give proper style to github div
--add hover effect to invalid input
 -add border to main container?*/
