@@ -6,8 +6,11 @@
     --neon-green: #39FF14;
     --neon-red: #FF2119;
     --black: #000000;
+    --text-base: #212121;
 
+    --mid-sp: 0.5rem;
     --input-border: 2px solid;
+    --main-border-radius: 5px;
     --focus-shadow: inset -5px 0px 15px;
     --unfocused-shadow: 0px 1px 7px;
     --hover-shadow: 0px 1px 15px;
@@ -41,7 +44,7 @@ body {
 }
 
 .main_container{
-    width: 50rem;
+    width: 55rem;
     display: flex;
     padding: 0.5rem 0 0.5rem 0.5rem;
     background-color: #371366;
@@ -56,8 +59,7 @@ body {
 img {
     width: 100%;
     height: 100%;
-    border-radius: 5px;
-    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.5);
+    border-radius: var(--main-border-radius);
 }
 
 .section_right {
@@ -65,13 +67,14 @@ img {
 }
 
 .header_container {
-    background-color: var(--black);
     margin: 1.5rem 0;
-    padding: 1rem 0;
+    padding: 1rem;
+    background-color: var(--black);
     box-shadow: var(--div-shadow);
 }
 
-p {
+p,
+.submit_button:hover {
     text-shadow: 1px 1px 7px;
 }
 
@@ -81,10 +84,9 @@ p {
     text-align: center;
     border: var(--input-border) var(--neon-lightblue);
     box-shadow: var(--unfocused-shadow) var(--neon-lightblue);
-    background-color: #212121;
-    border-radius: 5px;
+    background-color: var(--text-base);
+    border-radius: var(--main-border-radius);
     padding: 0.5rem;
-    margin: 0 1rem;
 }
 
 .header_text {
@@ -116,7 +118,6 @@ label,
 input {
   display: block;
   font-family: inherit;
-  margin: 0;
   width: 100%;
   padding: 0 0.5rem;
 }
@@ -130,6 +131,9 @@ label {
 input,
 button {
     height: 2rem;
+    color: var(--base-yellow);
+    border-radius: var(--main-border-radius);
+    transition: var(--input-light-transition);
 }
 
 ::placeholder {
@@ -139,17 +143,13 @@ button {
 input {
     appearance: none;
     outline: none;
-    color: var(--base-yellow);
-    background-color: #212121;
+    background-color: var(--text-base);
     border: var(--input-border) var(--neon-pink);
-    border-radius: 5px;
     box-shadow: var(--unfocused-shadow) var(--neon-pink);
-    transition: var(--input-light-transition)
 }
 
 /* Avoid shadow flickering if input hovered when it is focused*/
-input:hover,
-input:invalid:not(:focus):hover{
+input:hover{
     box-shadow: var(--hover-shadow) var(--neon-pink);
 }
 
@@ -182,29 +182,28 @@ input:valid:focus {
 
 .submit_button {
     font-size: 0.9rem;
-    font-weight: 520;
+    font-weight: bold;
     background-color: var(--black);
-    border: 3px solid var(--base-yellow);
-    border-radius: 5px;
-    color: var(--base-yellow);
+    border: 2.5px solid var(--base-yellow);
     box-shadow: var(--unfocused-shadow) var(--base-yellow);
-    transition: var(--input-light-transition);
 }
 
 .submit_button:hover {
     cursor: pointer;
-    text-shadow: var(--base-yellow) 2px 2px 5px;
     box-shadow: var(--hover-shadow) var(--base-yellow);
     transform: translateY(-0.10rem);
 }
 
 .foot_container {
     margin-bottom: 10rem;
+    background-color: var(--black);
+    box-shadow: var(--div-shadow);
+    padding: 0.25rem 0;
 }
 
 .foot_text {
     color: var(--base-yellow);
-    padding-left: 0.25rem;
+    margin: 0 1rem;
 }
 
 a {
@@ -227,6 +226,7 @@ a:visited {
     margin-left: 0.5rem;
 }
 
-/*Add password confirmation script
+/*
+-add password requirement label
 -add better transition from hover to focus box shadow
 -add border to main container?*/
