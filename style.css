@@ -5,12 +5,12 @@
     --base-yellow: #FFDDBD;
     --neon-green: #39FF14;
     --neon-red: #FF2119;
+    --black: #000000;
 
     --input-border: 2px solid;
     --focus-shadow: inset -5px 0px 20px;
     --unfocused-shadow: 0px 1px 7px;
     --hover-shadow: 0px 1px 15px;
-    --black: #000000;
 
 }
 
@@ -60,10 +60,13 @@ img {
     color: var(--neon-lightblue);
 }
 
+p {
+    text-shadow: 1px 1px 7px;
+}
+
 .sign_up_text{
     font-weight: 100;
     color: var(--base-yellow);
-    text-shadow: var(--base-yellow) 2px 2px 5px;
 }
 
 .header_container,
@@ -137,16 +140,11 @@ input:hover {
 
 input:focus {
     box-shadow: var(--focus-shadow) var(--neon-pink);
-    transition: all 0.25s ease
 }
 
 input:invalid:not(:focus):not(:placeholder-shown) {
     border: var(--input-border) var(--neon-red);
     box-shadow: var(--unfocused-shadow) var(--neon-red);
-}
-
-input:invalid:focus:not(:placeholder-shown){
-    box-shadow: var(--focus-shadow) var(--neon-red);
 }
 
 input:valid {
@@ -199,4 +197,10 @@ input:valid:focus {
     color: #6B00ED;
 }
 
-/*Add password confirmation script*/
+/*Add password confirmation script
+-add better transition from hover to focus box shadow
+-add text shadow in all p
+-add a suitable font
+-give proper style to github div
+-add hover effect to invalid input
+-add border to main container?*/
