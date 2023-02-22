@@ -221,6 +221,10 @@ a:visited {
     color: var(--neon-pink);
 }
 
+#input_info_p {
+    font-weight: bold;
+}
+
 #input_info_text {
     padding-left: 1rem;
     list-style: square;
