@@ -66,14 +66,18 @@ img {
     width: 45%;
 }
 
-.header_container {
-    margin: 1.5rem 0;
-    padding: 1rem;
+.container{
     background-color: var(--black);
     box-shadow: var(--div-shadow);
 }
 
+.header_container {
+    margin: 1.5rem 0;
+    padding: 1rem;
+}
+
 p,
+.input_info_container,
 .submit_button:hover {
     text-shadow: 1px 1px 7px;
 }
@@ -101,9 +105,7 @@ p,
 
 form {
     margin-bottom: 0.5rem;
-    background-color: var(--black);
     padding: 0.5rem;
-    box-shadow: var(--div-shadow);
 }
 
 .main_form_block {
@@ -148,7 +150,6 @@ input {
     box-shadow: var(--unfocused-shadow) var(--neon-pink);
 }
 
-/* Avoid shadow flickering if input hovered when it is focused*/
 input:hover{
     box-shadow: var(--hover-shadow) var(--neon-pink);
 }
@@ -194,16 +195,13 @@ input:valid:focus {
     transform: translateY(-0.10rem);
 }
 
-.foot_container {
-    margin-bottom: 10rem;
-    background-color: var(--black);
-    box-shadow: var(--div-shadow);
-    padding: 0.25rem 0;
+.login_container {
+    margin-bottom: 1rem;
+    padding: 0.25rem 1rem;
 }
 
-.foot_text {
+.login_text {
     color: var(--base-yellow);
-    margin: 0 1rem;
 }
 
 a {
@@ -212,6 +210,20 @@ a {
 
 a:visited {
     color: #6B00ED;
+}
+
+.input_info_container {
+    height: 8rem;
+    margin-bottom: 1.5rem;
+    padding: 1rem 1.5rem;
+    font-size: 0.8rem;
+    text-align: left;
+    color: var(--neon-pink);
+}
+
+#input_info_text {
+    padding-left: 1rem;
+    list-style: square;
 }
 
 .gitHub {
@@ -226,7 +238,4 @@ a:visited {
     margin-left: 0.5rem;
 }
 
-/*
--add password requirement label
--add better transition from hover to focus box shadow
--add border to main container?*/
+/*improve input shadow box transition*/
