@@ -22,31 +22,21 @@ A styled form webpage
 - What is the purpose of your project?
 - Why did you undertake it?
 <!-- You don't have to answer all the questions - just the ones relevant to your project. -->
-
+The idea behind making this project was to incorporate all the new concepts learned while following all The Odin Project Intermediate HTML and CSS lessons up to form pages. Namely the concepts that are applied in this project are:
+- Use of transitions
+- Use of CSS Transform
+- CSS custom properties (variables)
+- Custom text fonts and use of @font-face
+- 
 
 ## Technologies Used
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-- Tech 2 - version 2.0
-- Tech 3 - version 3.0
-
-
-## Features
-List the ready features here:
-- Awesome feature 1
-- Awesome feature 2
-- Awesome feature 3
-
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JS](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
 
 ## Screenshots
 ![Example screenshot](./img/screenshot.png)
 <!-- If you have screenshots you'd like to share, include them here. -->
-
-
-## Setup
-What are the project requirements/dependencies? Where are they listed? A requirements.txt or a Pipfile.lock file perhaps? Where is it located?
-
-Proceed to describe how to install / setup one's local environment / get started with the project.
-
 
 ## Usage
 How does one go about using it?
@@ -72,9 +62,8 @@ To do:
 
 
 ## Acknowledgements
-Give credit here.
 - This project was inspired by...
-- This project was based on [this tutorial](https://www.example.com).
+- This project was based on [this tutorial](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-sign-up-form).
 - Many thanks to...
 
 
