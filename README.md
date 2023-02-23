@@ -25,7 +25,7 @@ A styled form webpage
 
 
 ## Technologies Used
-![HTML5]({https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white})
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 - Tech 2 - version 2.0
 - Tech 3 - version 3.0
 
